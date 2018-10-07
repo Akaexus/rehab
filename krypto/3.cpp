@@ -19,7 +19,11 @@ std::string cryptoGrid(int rows, std::string s) {
   return output;
 }
 
+std::string decryptoGrid(int rows, std::string s) {
+  return cryptoGrid(rows, s);
+}
+
 
 int main() {
-  std::cout << cryptoGrid(2, "ALAMAKOTA");
+  std::cout << decryptoGrid(3, cryptoGrid(3, "ALAMAKOTA"));
 }
